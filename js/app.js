@@ -1,6 +1,7 @@
 var locFlag;
 var answerFlag;
 var loc = prompt('Are you located in USA?');
+var counter = 0;
 console.log('Location: ',loc);
 
 if (loc.toUpperCase() == "Y" || loc.toUpperCase() == "YES") {
@@ -8,6 +9,7 @@ if (loc.toUpperCase() == "Y" || loc.toUpperCase() == "YES") {
     console.log('User name is:',userName);
     alert(userName + ', welcome to my page, want to show my skills. Please guess ...');
     locFlag = true;
+    add();
     } else
     {
     alert('Not interested to talk you.');
@@ -21,6 +23,7 @@ if (locFlag) {
         if (answerSkill.toUpperCase() === mySkills[i]) {
             alert('You guess is correct!');
             answerFlag = true;
+            add();
             break;
         }
     }
@@ -32,8 +35,9 @@ if (locFlag) {
     for (var i = 0; i < myFavoriteCity.length; i++) {
         console.log('Current iteration skill value:', myFavoriteCity[i]);
         if (answerCity.toUpperCase() === myFavoriteCity[i]) {
-            alert('You guess is correct!');
+            alert('Your guess is correct!');
             answerFlag = true;
+            add();
             break;
         }
     }
@@ -47,6 +51,7 @@ if (locFlag) {
         if (answerFood.toUpperCase() === myFavoriteFood[i]) {
             alert('You guess is correct!');
             answerFlag = true;
+            add();
             break;
         }
     }
@@ -60,6 +65,7 @@ if (locFlag) {
         if (answerDrink.toUpperCase() === myFavoriteDrink[i]) {
             alert('You guess is correct!');
             answerFlag = true;
+            add();
             break;
         }
     }
@@ -73,6 +79,7 @@ if (locFlag) {
         if (answerGame.toUpperCase() === myFavoriteGame[i]) {
             alert('You guess is correct!');
             answerFlag = true;
+            add();
             break;
         }
     }
@@ -84,3 +91,9 @@ function alertMessage(answerFlag) {
         alert('Incorrect guess, try again .. something else');
     }
 }
+
+function add() {
+    counter += 1;
+ }
+
+ alert("Number of correct answers is : "+counter);
