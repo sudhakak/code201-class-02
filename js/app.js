@@ -24,9 +24,8 @@ if (locFlag) {
             break;
         }
     }
-    if (!answerFlag){
-        alert('Incorrect guess, try again..something else');
-    }
+    alertMessage(answerFlag);
+    
     answerFlag=false;
     var myFavoriteCity = ['NEW YORK', 'SEATTLE', 'CHICAGO', 'TAMPA', 'PORTLAND'];
     var answerCity = prompt('What is one of my favorite city?');
@@ -38,9 +37,8 @@ if (locFlag) {
             break;
         }
     }
-    if (!answerFlag) {
-        alert('Incorrect guess, try again .. something else');
-    }
+    alertMessage(answerFlag);
+    
     answerFlag=false;
     var myFavoriteFood = ['CHICKEN', 'FISH', 'FRUITS', 'NUTS', 'SALAD'];
     var answerFood = prompt('What is one of my favorite food?');
@@ -52,9 +50,8 @@ if (locFlag) {
             break;
         }
     }
-    if (!answerFlag) {
-        alert('Incorrect guess, try again .. something else');
-    }
+    alertMessage(answerFlag);
+
     answerFlag=false;
     var myFavoriteDrink = ['TEA', 'BEER', 'JUICE', 'COFFEE', 'WATER'];
     var answerDrink = prompt('What is one of my favorite drink?');
@@ -66,9 +63,8 @@ if (locFlag) {
             break;
         }
     }
-      if (!answerFlag) {
-        alert('Incorrect guess, try again .. something else');
-    }
+    alertMessage(answerFlag);
+
     answerFlag=false;
     var myFavoriteGame = ['FOOTBALL', 'SOCCER', 'BASEBALL', 'TENNIS', 'BADMINTON'];
     var answerGame = prompt('What is one of my favorite game');
@@ -80,7 +76,11 @@ if (locFlag) {
             break;
         }
     }
-      if (!answerFlag) {
-        alert('Incorrect guess, try again ..');
+    alertMessage(answerFlag);
+}
+
+function alertMessage(answerFlag) {
+    if (!answerFlag) {
+        alert('Incorrect guess, try again .. something else');
     }
 }
